@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Backpack Story Generator</title>
+    <link rel="stylesheet" href="../static/styles.css"> <!-- Link to the external CSS file -->
+</head>
+
+<body>
+    <h1>Generate a Story</h1>
+    <form method="POST">
+        <label for="prompt">Enter your prompt:</label><br>
+        <textarea id="prompt" name="prompt" rows="4" cols="50" required></textarea><br>
+        <button type="submit">Generate</button>
+    </form>
+
+    {% if response %}
+    <h2>Generated Story:</h2>
+    <p>{{ response }}</p>
+    {% endif %}
+</body>
+
+</html>
